@@ -6,47 +6,40 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Manil Mediene - Portfolio</title>
-  <meta name="description"
-    content="Portfolio de Manil Mediene, photographe.">
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="stylesheet" href="output.css" />
-  <link rel="stylesheet"  />
-  <!-- Start - Fonts -->
+  <meta name="description" content="Portfolio de Manil Mediene, photographe.">
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
-  <!-- End - Fonts -->
-  <!-- Start - Fancybox Scripts -->
+  <!-- Fancybox -->
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-  <!-- End - Fancybox Scripts -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      content: ["./dist/*.{html,js}"],
       theme: {
-        extend:
-                {
-                  fontFamily: {
-                    'nothingyoucoulddo': ['Nothing You Could Do', 'cursive'],
-                    'signika': ['Signika', 'sans-serif'],
-                  },
-                },
+        extend: {
+          fontFamily: {
+            'signika': ['Signika', 'sans-serif'],
+          },
+        },
       },
-      plugins: [],
     }
   </script>
+  <style>
+    body { opacity: 0; transition: opacity 0.5s ease; }
+    body.visible { opacity: 1; }
+    img { transition: transform 0.5s ease, opacity 0.5s ease; opacity: 0; }
+    img.visible { opacity: 1; }
+  </style>
 </head>
 
-<body
-  class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
+<body class="bg-white dark:bg-neutral-950 text-black dark:text-white px-5 md:px-20">
   <header class="w-full border-b border-neutral-200 dark:border-neutral-800">
     <div class="container mx-auto pt-10 pb-10 md:pt-14 md:pb-14">
       <div class="flex flex-row items-start justify-between gap-8 md:gap-12 lg:gap-16">
-        <nav id="nav" role="navigation" aria-label="Principal" class="flex-1 min-w-0">
+        <nav role="navigation" aria-label="Principal" class="flex-1 min-w-0">
           <p class="text-xs font-signika font-semibold uppercase tracking-[0.4em] text-neutral-500 dark:text-neutral-400">
             Portfolio</p>
           <h1 class="mt-4 text-4xl md:text-5xl lg:text-6xl font-signika font-bold tracking-tight leading-tight">
@@ -57,230 +50,186 @@
           </p>
         </nav>
         <a href="index.html" aria-label="Manil Mediene — accueil"
-          class="group shrink-0 w-[6.75rem] sm:w-[7.75rem] text-right focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-black rounded-sm">
-          <div
-            class="relative aspect-[3/2] overflow-hidden border border-neutral-300 dark:border-neutral-600 bg-neutral-50/80 dark:bg-neutral-900/60 shadow-sm transition-shadow duration-300 group-hover:shadow-md group-hover:border-neutral-400 dark:group-hover:border-neutral-500">
-            <span
-              class="pointer-events-none absolute left-2 top-2 h-3 w-3 border-l border-t border-neutral-800 dark:border-neutral-100 opacity-80"></span>
-            <span
-              class="pointer-events-none absolute right-2 top-2 h-3 w-3 border-r border-t border-neutral-800 dark:border-neutral-100 opacity-80"></span>
-            <span
-              class="pointer-events-none absolute bottom-2 left-2 h-3 w-3 border-l border-b border-neutral-800 dark:border-neutral-100 opacity-80"></span>
-            <span
-              class="pointer-events-none absolute bottom-2 right-2 h-3 w-3 border-r border-b border-neutral-800 dark:border-neutral-100 opacity-80"></span>
+          class="group shrink-0 w-[6.75rem] sm:w-[7.75rem] text-right focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400 rounded-sm">
+          <div class="relative aspect-[3/2] overflow-hidden border border-neutral-300 dark:border-neutral-600 bg-neutral-50 dark:bg-neutral-900 shadow-sm transition-shadow duration-300 group-hover:shadow-md">
+            <span class="pointer-events-none absolute left-2 top-2 h-3 w-3 border-l border-t border-neutral-800 dark:border-neutral-100 opacity-80"></span>
+            <span class="pointer-events-none absolute right-2 top-2 h-3 w-3 border-r border-t border-neutral-800 dark:border-neutral-100 opacity-80"></span>
+            <span class="pointer-events-none absolute bottom-2 left-2 h-3 w-3 border-l border-b border-neutral-800 dark:border-neutral-100 opacity-80"></span>
+            <span class="pointer-events-none absolute bottom-2 right-2 h-3 w-3 border-r border-b border-neutral-800 dark:border-neutral-100 opacity-80"></span>
             <div class="absolute inset-0 flex flex-col justify-end items-end p-2.5 sm:p-3">
-              <p class="text-[0.6rem] sm:text-[0.65rem] font-signika font-semibold uppercase tracking-[0.28em] text-neutral-400 dark:text-neutral-500">
-                Sélection</p>
-              <p
-                class="mt-1 font-signika text-base sm:text-lg font-bold tracking-[0.35em] text-neutral-800 dark:text-neutral-100">
-                M·M</p>
+              <p class="text-[0.6rem] sm:text-[0.65rem] font-signika font-semibold uppercase tracking-[0.28em] text-neutral-400 dark:text-neutral-500">Sélection</p>
+              <p class="mt-1 font-signika text-base sm:text-lg font-bold tracking-[0.35em] text-neutral-800 dark:text-neutral-100">M·M</p>
             </div>
           </div>
-          <p
-            class="mt-2 text-[0.65rem] sm:text-xs font-signika text-neutral-400 dark:text-neutral-500 tracking-[0.12em]">
-            Travaux &amp; séries</p>
+          <p class="mt-2 text-[0.65rem] sm:text-xs font-signika text-neutral-400 dark:text-neutral-500 tracking-[0.12em]">Travaux &amp; séries</p>
         </a>
       </div>
     </div>
   </header>
-  <!-- Content -->
+
+  <!-- Galerie -->
   <div class="container mx-auto">
     <section class="text-neutral-700 pt-10 md:pt-12" aria-labelledby="gallery-heading">
       <h2 id="gallery-heading" class="sr-only">Galerie</h2>
-      <div class="container w-full">
+      <div class="w-full">
         <div class="flex flex-wrap w-full">
+
+          <!-- Colonne 1 -->
           <div class="flex w-full md:w-1/2 flex-wrap">
             <div class="w-full md:w-1/2 p-1">
               <div class="overflow-hidden h-full w-full">
-                <a href="DSC_0037.JPG"
-                  data-fancybox="gallery">
-                  <img alt="a person standing in front of a rock formation"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="DSC_0037.JPG" />
+                <a href="DSC_0037.JPG" data-fancybox="gallery">
+                  <img alt="Photo DSC_0037" class="block h-full w-full object-cover object-center transform scale-100 hover:scale-110 transition-transform duration-500" src="DSC_0037.JPG" />
                 </a>
               </div>
             </div>
             <div class="w-full md:w-1/2 p-1">
               <div class="overflow-hidden h-full w-full">
-                <a href="DSC_0085.JPG"
-                  data-fancybox="gallery">
-                  <img alt="a cat laying on top of a sidewalk next to the ocean"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="DSC_0085.JPG" />
+                <a href="DSC_0085.JPG" data-fancybox="gallery">
+                  <img alt="Photo DSC_0085" class="block h-full w-full object-cover object-center transform scale-100 hover:scale-110 transition-transform duration-500" src="DSC_0085.JPG" />
                 </a>
               </div>
             </div>
             <div class="w-full p-1">
               <div class="overflow-hidden h-full w-full">
-                <a href="DSC00303.JPG"
-                  data-fancybox="gallery">
-                  <img alt="a man standing on a beach next to the ocean"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="DSC00303.JPG" />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="flex w-full md:w-1/2 flex-wrap">
-            <div class="w-full p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="DSC00385.JPG"
-                  data-fancybox="gallery">
-                  <img alt="a snow covered mountain with trees on the side"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="DSC00385.JPG" />
-                </a>
-              </div>
-            </div>
-            <div class="w-full md:w-1/2 p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="IMG_2959.JPG"
-                  data-fancybox="gallery">
-                  <img alt="a branch of a plant floating in a body of water"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="IMG_2959.JPG" />
-                </a>
-              </div>
-            </div>
-            <div class="w-full md:w-1/2 p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="IMG_2973.JPG"
-                  data-fancybox="gallery">
-                  <img alt="a blue sky with a lot of red and orange clouds"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="IMG_2973.JPG" />
-                </a>
-              </div>
-            </div>
-            <div class="w-full md:w-1/2 p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="IMG_2976.JPG"
-                  data-fancybox="gallery">
-                  <img alt="a view of the ocean from the top of a hill"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="IMG_2976.JPG" />
-                </a>
-              </div>
-            </div>
-            <div class="w-full md:w-1/2 p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="IMG_3009.JPG"
-                  data-fancybox="gallery">
-                  <img alt="a pheasant flying in the sky with its wings spread"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="IMG_3009.JPG" />
+                <a href="DSC00303.JPG" data-fancybox="gallery">
+                  <img alt="Photo DSC00303" class="block h-full w-full object-cover object-center transform scale-100 hover:scale-110 transition-transform duration-500" src="DSC00303.JPG" />
                 </a>
               </div>
             </div>
           </div>
 
+          <!-- Colonne 2 -->
           <div class="flex w-full md:w-1/2 flex-wrap">
             <div class="w-full p-1">
               <div class="overflow-hidden h-full w-full">
-                <a href="IMG_3154.JPG"
-                  data-fancybox="gallery">
-                  <img alt="a statue of a man next to a statue of a woman"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="IMG_3154.JPG" />
+                <a href="DSC00385.JPG" data-fancybox="gallery">
+                  <img alt="Photo DSC00385" class="block h-full w-full object-cover object-center transform scale-100 hover:scale-110 transition-transform duration-500" src="DSC00385.JPG" />
                 </a>
               </div>
             </div>
             <div class="w-full md:w-1/2 p-1">
               <div class="overflow-hidden h-full w-full">
-                <a href="IMG_3301.JPG"
-                  data-fancybox="gallery">
-                  <img alt="a city street with tall buildings in the background"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="IMG_3301.JPG" />
+                <a href="IMG_2959.JPG" data-fancybox="gallery">
+                  <img alt="Photo IMG_2959" class="block h-full w-full object-cover object-center transform scale-100 hover:scale-110 transition-transform duration-500" src="IMG_2959.JPG" />
                 </a>
               </div>
             </div>
             <div class="w-full md:w-1/2 p-1">
               <div class="overflow-hidden h-full w-full">
-                <a href="IMG_3338.JPG"
-                  data-fancybox="gallery">
-                  <img alt="25 de abril bridge spanning over Tagus river"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="IMG_3338.JPG" />
+                <a href="IMG_2973.JPG" data-fancybox="gallery">
+                  <img alt="Photo IMG_2973" class="block h-full w-full object-cover object-center transform scale-100 hover:scale-110 transition-transform duration-500" src="IMG_2973.JPG" />
                 </a>
               </div>
             </div>
             <div class="w-full md:w-1/2 p-1">
               <div class="overflow-hidden h-full w-full">
-                <a href="IMG_3424.JPG"
-                  data-fancybox="gallery">
-                  <img alt="a lot of lanterns floating in the air at night"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="IMG_3424.JPG" />
+                <a href="IMG_2976.JPG" data-fancybox="gallery">
+                  <img alt="Photo IMG_2976" class="block h-full w-full object-cover object-center transform scale-100 hover:scale-110 transition-transform duration-500" src="IMG_2976.JPG" />
                 </a>
               </div>
             </div>
             <div class="w-full md:w-1/2 p-1">
               <div class="overflow-hidden h-full w-full">
-                <a href="IMG_3450.JPG"
-                  data-fancybox="gallery">
-                  <img alt="a flock of seaguls flying over a body of water"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="IMG_3450.JPG" />
+                <a href="IMG_3009.JPG" data-fancybox="gallery">
+                  <img alt="Photo IMG_3009" class="block h-full w-full object-cover object-center transform scale-100 hover:scale-110 transition-transform duration-500" src="IMG_3009.JPG" />
                 </a>
               </div>
             </div>
           </div>
+
+          <!-- Colonne 3 -->
           <div class="flex w-full md:w-1/2 flex-wrap">
-            <div class="w-full md:w-1/2 p-1">
+            <div class="w-full p-1">
               <div class="overflow-hidden h-full w-full">
-                <a href="IMG_3554.JPG"
-                  data-fancybox="gallery">
-                  <img alt="a statue of a headless angel"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="IMG_3554.JPG" />
+                <a href="IMG_3154.JPG" data-fancybox="gallery">
+                  <img alt="Photo IMG_3154" class="block h-full w-full object-cover object-center transform scale-100 hover:scale-110 transition-transform duration-500" src="IMG_3154.JPG" />
                 </a>
               </div>
             </div>
             <div class="w-full md:w-1/2 p-1">
               <div class="overflow-hidden h-full w-full">
-                <a href="IMG_3617.JPG"
-                  data-fancybox="gallery">
-                  <img alt="Monument to the Discoveries viewed from top to bottom"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="IMG_3617.JPG" />
+                <a href="IMG_3301.JPG" data-fancybox="gallery">
+                  <img alt="Photo IMG_3301" class="block h-full w-full object-cover object-center transform scale-100 hover:scale-110 transition-transform duration-500" src="IMG_3301.JPG" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="IMG_3338.JPG" data-fancybox="gallery">
+                  <img alt="Photo IMG_3338" class="block h-full w-full object-cover object-center transform scale-100 hover:scale-110 transition-transform duration-500" src="IMG_3338.JPG" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="IMG_3424.JPG" data-fancybox="gallery">
+                  <img alt="Photo IMG_3424" class="block h-full w-full object-cover object-center transform scale-100 hover:scale-110 transition-transform duration-500" src="IMG_3424.JPG" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="IMG_3450.JPG" data-fancybox="gallery">
+                  <img alt="Photo IMG_3450" class="block h-full w-full object-cover object-center transform scale-100 hover:scale-110 transition-transform duration-500" src="IMG_3450.JPG" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colonne 4 -->
+          <div class="flex w-full md:w-1/2 flex-wrap">
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="IMG_3554.JPG" data-fancybox="gallery">
+                  <img alt="Photo IMG_3554" class="block h-full w-full object-cover object-center transform scale-100 hover:scale-110 transition-transform duration-500" src="IMG_3554.JPG" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="IMG_3617.JPG" data-fancybox="gallery">
+                  <img alt="Photo IMG_3617" class="block h-full w-full object-cover object-center transform scale-100 hover:scale-110 transition-transform duration-500" src="IMG_3617.JPG" />
                 </a>
               </div>
             </div>
             <div class="w-full p-1">
               <div class="overflow-hidden h-full w-full">
-                <a href="IMG_3628.JPG"
-                  data-fancybox="gallery">
-                  <img
-                    alt="a group of people walking along the museum of art, architecture and technology of lisbon next to the Tagus river"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="IMG_3628.JPG" />
+                <a href="IMG_3628.JPG" data-fancybox="gallery">
+                  <img alt="Photo IMG_3628" class="block h-full w-full object-cover object-center transform scale-100 hover:scale-110 transition-transform duration-500" src="IMG_3628.JPG" />
                 </a>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
   </div>
+
   <!-- Footer -->
   <footer>
-    <div class="max-w-screen-xl py-16 mx-auto">
-      <div class="grid grid-cols-1 gap-8 text-center mx-auto">
-        <div>
-          <p class="font-signika"><b>MANIL MEDIENE</b></p>
-        </div>
-      </div>
-      <p class="mt-8 text-xs text-gray-600 dark:text-gray-300 text-center">
-        © 2023 Developed and Designed by João Franco and modified by Manil Mediene
+    <div class="max-w-screen-xl py-16 mx-auto text-center">
+      <p class="font-signika font-bold">MANIL MEDIENE</p>
+      <p class="mt-4 text-xs text-gray-500 dark:text-gray-400">
+        © 2024 Manil Mediene
       </p>
     </div>
   </footer>
-  <!-- Script for the LightBox -->
+
+  <!-- Scripts -->
   <script>
     Fancybox.bind("[data-fancybox]", {});
-  </script>
-  <script src="fade_in.js"></script>
-</body>
 
+    // Fade-in intégré directement — plus de dépendance externe
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.classList.add("visible");
+      let delay = 0;
+      document.querySelectorAll("img").forEach(function (img) {
+        setTimeout(function () { img.classList.add("visible"); }, delay);
+        delay += 80;
+      });
+    });
+  </script>
+</body>
 </html>
