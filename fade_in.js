@@ -1,14 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const body = document.querySelector("body");
-  body.classList.remove("opacity-0");
-  body.classList.add("opacity-100");
-  const photos = document.querySelectorAll("img");
+  // 1. Rendre le corps visible
+  document.body.classList.add("visible");
+
+  // 2. Cibler UNIQUEMENT les images de la galerie (pour ne pas casser Fancybox)
+  const photos = document.querySelectorAll("section img");
+  
   let delay = 0;
   photos.forEach((photo) => {
     setTimeout(() => {
-      photo.classList.remove("opacity-0");
-      photo.classList.add("opacity-100");
+      // On utilise la classe .visible définie dans votre <style> HTML
+      photo.classList.add("visible");
     }, delay);
-    delay += 100;
+    delay += 100; // Effet d'apparition en cascade
   });
 });
